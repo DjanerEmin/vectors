@@ -74,6 +74,7 @@ Lets create some vectors of different types and then combine them together into 
 
 ```{r}
 name <- c("Alice", "Bob", "Charlie", "Olivia", "Max")
+gender <- c("female", "male", "diverse", "female", "male")
 class(name)
 ```
 
@@ -150,7 +151,21 @@ Data frame is table. Each column of the table is a vectors.
 
 ```{r}
 people <- 
-  data.frame(name, birthday, height, weight, is_married)
+  data.frame(name, birthday, height, weight, gender, is_married)
 
 people
+
+class(people)
+
+# now we can do some data analysis using
+library(tidyverse)
+
+# like finding out who
+people |> 
+  filter(is_married)
+
+# or who is
+people |> 
+  filter(gender == "male",
+         height > 1.90)
 ```
