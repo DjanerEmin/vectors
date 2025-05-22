@@ -123,7 +123,7 @@ class(beginning)
 end - beginning
 
 
-# generate all dates in 2002
+# generate all dates in 2000
 # and pick 5 at random
 # (i am using the new pipe symbol '|>')
 birthday <- 
@@ -133,7 +133,7 @@ birthday <-
 birthday
 
 # same thing without piping
-  # option 1. with an intermediate object to save all dates
+  # option 1. with an intermediate object for all 2000 dates
 x <- seq(beginning, end, by = 1)
 birthday <- sample(x, 5)
 
@@ -168,4 +168,6 @@ people |>
 people |> 
   filter(gender == "male",
          height > 1.90)
+
+# more next time :)
 ```
