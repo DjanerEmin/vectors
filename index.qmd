@@ -52,7 +52,7 @@ x <- 1:3
 x
 ```
 
-![](images/clipboard-2831182069.png)
+![](unbinding-1.png){width="249"}
 
 ## 🆎 Types of Vectors
 
@@ -105,9 +105,9 @@ name[99]
 name[is_married]
 ```
 
-![](images/clipboard-2063416601.png){width="592"}
+![](subsetting.png){width="441"}
 
-### 📅 Date vector: 
+### 📅 Date vector:
 
 ```{r}
 # i will generate 5 random birthdays 
