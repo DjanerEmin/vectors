@@ -122,25 +122,31 @@ class(beginning)
 end - beginning
 
 
-# i am using the new pipe symbol '|>'
+# generate all dates in 2002
+# and pick 5 at random
+# (i am using the new pipe symbol '|>')
 birthday <- 
   seq(from = beginning, to = end, by = 1) |>  
   sample(5)
 
-# same without pipe
-# step by step
+birthday
+
+# same thing without piping
+  # option 1. with an intermediate object to save all dates
 x <- seq(beginning, end, by = 1)
 birthday <- sample(x, 5)
 
-# nested
-birthday <- sample(seq(beginning, end, by = 1), 5)
+length(x)
+head(x)
+tail(x)
 
-birthday
+  # option 2. nested, e.g. without intermediate x
+birthday <- sample(seq(beginning, end, by = 1), 5)
 ```
 
 ## 🧮 Data Frame
 
-Data frame is a table. Each column of the table is a vectors.
+Data frame is table. Each column of the table is a vectors.
 
 ```{r}
 people <- 
